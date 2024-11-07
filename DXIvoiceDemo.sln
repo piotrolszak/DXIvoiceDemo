@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXIvoiceDemo", "DXIvoiceDemo\DXIvoiceDemo.csproj", "{796E2006-1A8A-4165-A2E4-31577013F38E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXIvoiceDemo.Model", "DXIvoiceDemo.Model\DXIvoiceDemo.Model.csproj", "{655CCA3F-4DC3-4104-8A9D-6C790D4396EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{796E2006-1A8A-4165-A2E4-31577013F38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{796E2006-1A8A-4165-A2E4-31577013F38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{796E2006-1A8A-4165-A2E4-31577013F38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{796E2006-1A8A-4165-A2E4-31577013F38E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655CCA3F-4DC3-4104-8A9D-6C790D4396EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655CCA3F-4DC3-4104-8A9D-6C790D4396EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655CCA3F-4DC3-4104-8A9D-6C790D4396EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655CCA3F-4DC3-4104-8A9D-6C790D4396EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66FF4F63-C971-4E45-B900-7F0E8946BAC9}
+	EndGlobalSection
+EndGlobal
