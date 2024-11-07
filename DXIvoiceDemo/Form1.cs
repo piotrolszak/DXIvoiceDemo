@@ -24,7 +24,7 @@ namespace DXIvoiceDemo
     {
         private readonly ICustomerRepository _customerRepository;
         private readonly IInvoiceRepository _invoiceRepository;
-        private readonly IDataService _dataService; 
+        private readonly IDataService _dataService;
         private List<Invoice> _invoices;
         private List<Customer> _customers;
         public Form1(ICustomerRepository customerRepository, IInvoiceRepository invoiceRepository, IDataService dataService)
@@ -97,7 +97,7 @@ namespace DXIvoiceDemo
                 await _customerRepository.Update(e.Row as Customer);
             }
         }
-        
+
         private async void bbiGenerateInvoices_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var random = new Random();
@@ -201,9 +201,34 @@ namespace DXIvoiceDemo
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        { 
+        {
             LoadData();
         }
 
+        private void bbiExportPDF_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "PDF Files|*.pdf";    
+                saveFileDialog.Title = "Zapisz jako";         
+                saveFileDialog.FileName = "GridExport.pdf";   
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    if (xtcData.SelectedTabPage.Name == "xtpInvoice")
+                    {
+                        gcInvoice.ExportToPdf(filePath);
+                    }
+                    else if (xtcData.SelectedTabPage.Name == "xtpCustomers")
+                    {
+                        gcCustomers.ExportToPdf(filePath);
+                    }
+
+                    MessageBox.Show("Dane zostały wyeksportowane do PDF!", "Eksport", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

@@ -66,6 +66,7 @@
             layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
             layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             reportGenerator1 = new DevExpress.XtraReports.ReportGeneration.ReportGenerator(components);
+            bbiExportPDF = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemTextEdit1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemRadioGroup1).BeginInit();
@@ -105,8 +106,8 @@
             barManager1.DockControls.Add(barDockControlLeft);
             barManager1.DockControls.Add(barDockControlRight);
             barManager1.Form = this;
-            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { bbiGenerateInvoices, bbiGeneateCustomers, beiNumberObject, barStaticItem1, bbiExportCSV, bbiExportXML });
-            barManager1.MaxItemId = 7;
+            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { bbiGenerateInvoices, bbiGeneateCustomers, beiNumberObject, barStaticItem1, bbiExportCSV, bbiExportXML, bbiExportPDF });
+            barManager1.MaxItemId = 8;
             barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { repositoryItemRadioGroup1, repositoryItemTextEdit1 });
             barManager1.StatusBar = bar3;
             // 
@@ -116,7 +117,7 @@
             bar1.DockCol = 0;
             bar1.DockRow = 0;
             bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(bbiGenerateInvoices), new DevExpress.XtraBars.LinkPersistInfo(bbiGeneateCustomers), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem1), new DevExpress.XtraBars.LinkPersistInfo(beiNumberObject), new DevExpress.XtraBars.LinkPersistInfo(bbiExportCSV), new DevExpress.XtraBars.LinkPersistInfo(bbiExportXML) });
+            bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(bbiGenerateInvoices), new DevExpress.XtraBars.LinkPersistInfo(bbiGeneateCustomers), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem1), new DevExpress.XtraBars.LinkPersistInfo(beiNumberObject), new DevExpress.XtraBars.LinkPersistInfo(bbiExportCSV), new DevExpress.XtraBars.LinkPersistInfo(bbiExportXML), new DevExpress.XtraBars.LinkPersistInfo(bbiExportPDF) });
             bar1.Text = "Tools";
             // 
             // bbiGenerateInvoices
@@ -416,6 +417,13 @@
             layoutControlGroup4.Size = new System.Drawing.Size(1320, 563);
             layoutControlGroup4.TextVisible = false;
             // 
+            // bbiExportPDF
+            // 
+            bbiExportPDF.Caption = "Eksport do PDF";
+            bbiExportPDF.Id = 7;
+            bbiExportPDF.Name = "bbiExportPDF";
+            bbiExportPDF.ItemClick += bbiExportPDF_ItemClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -502,6 +510,7 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl5;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
         private DevExpress.XtraReports.ReportGeneration.ReportGenerator reportGenerator1;
+        private DevExpress.XtraBars.BarButtonItem bbiExportPDF;
     }
 }
 
